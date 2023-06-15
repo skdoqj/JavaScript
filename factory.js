@@ -1,10 +1,9 @@
-function factory(f, s) {
-  (this.first = f), (this.second = s);
+function factory() {
+  (this.first = 10),
+    (this.second = 20),
+    (this.sum = function () {
+      return this.first + this.second;
+    });
 }
-factory.prototype.sum = function () {
-  return this.first + this.second;
-};
 
-let A = new factory(10, 20);
-let B = new factory(20, 20);
-console.log(A.sum(), B.sum());
+let A = new factory();
