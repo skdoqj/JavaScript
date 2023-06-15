@@ -6,4 +6,5 @@ factory.prototype.sum = function () {
 };
 
 let A = new factory(10, 20);
-console.log(A.sum());
+let B = new factory(20, 20);
+console.log(A.sum(), B.sum());
