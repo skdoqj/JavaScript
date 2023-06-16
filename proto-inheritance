@@ -1,0 +1,10 @@
+const superObj = {superVal:'super'}
+const subObj = {subVal:'sub'}
+//서브의 부모 = 수퍼
+subObj.__proto__ = superObj;
+
+console.log(subObj.superVal)
+subObj.superVal = 'ssub'
+console.log(subObj.superVal)
+// 부모의 값은 바뀌지 않음
+console.log(superObj.superVal)
